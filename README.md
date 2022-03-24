@@ -3,6 +3,11 @@
 #### Description: KVcord is an online chat app where there is only 1 singlular messaging channel, that people have to create accounts for via a login and register function. The app is mimicking the popular application "discord", but without many of the features. Using Flask, the application will require a login to use it's function, but not utilize an api to recieve information. 
 
 <div id="top"></div>
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
@@ -75,12 +80,16 @@ Project Link: [https://github.com/Kylejeong2/KVcord](https://github.com/Kylejeon
 
  <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/Kylejeong2/KVcord.svg?style=for-the-badge
+[contributors-url]: https://github.com/Kylejeong2/KVcord/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/Kylejeong2/KVcord.svg?style=for-the-badge
 [forks-url]: https://github.com/Kylejeong2/KVcord/network/members
 [stars-shield]: https://img.shields.io/github/stars/Kylejeong2/KVcord.svg?style=for-the-badge
 [stars-url]: https://github.com/Kylejeong2/KVcord/stargazers
 [issues-shield]: https://img.shields.io/github/issues/Kylejeong2/KVcord.svg?style=for-the-badge
 [issues-url]: https://github.com/Kylejeong2/KVcord/issues
+[license-shield]: https://img.shields.io/github/license/Kylejeong2/KVcord.svg?style=for-the-badge
+[license-url]: https://github.com/Kylejeong2/KVcord/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/kyle-jeong-971445205/
 [product-screenshot]: images/screenshot.png
