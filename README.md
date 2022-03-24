@@ -3,20 +3,13 @@
 #### Description: KVcord is an online chat app where there is only 1 singlular messaging channel, that people have to create accounts for via a login and register function. The app is mimicking the popular application "discord", but without many of the features. Using Flask, the application will require a login to use it's function, but not utilize an api to recieve information. 
 
 <div id="top"></div>
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/Kylejeong2/KVcord">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
-
+  <p>https://www.linkedin.com/in/kyle-jeong-971445205/</p>
 <h3 align="center">KVcord</h3>
 
 <div align="left">
