@@ -13,7 +13,8 @@
   </a>
 
 <h3 align="center">KVcord</h3>
-  
+
+<div align="left">
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -69,6 +70,8 @@ Kyle Jeong - [@Kylejeong2](https://twitter.com/kylejeong21) - Kylejeong21@gmail.
 Project Link: [https://github.com/Kylejeong2/KVcord](https://github.com/Kylejeong2/KVcord)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+ 
+  </div>
 
  <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
