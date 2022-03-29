@@ -31,12 +31,24 @@ def after_request(response):
     response.headers["Pragma"] = "no-cache"
     return response
 
-@app.route("/")
+@app.route("/", methods=["GET", "POST"])
 @login_required
 def index():
-    #shows the chat and all the messages sent previously
-    
-    return render_template("index.html")
+    if request.method == "POST":
+        chat = int(request.form.get("chat"))
+        if chat > 5 or chat < 1:
+            return apology("not a valid chat number", 400)
+        if chat == 1:
+            return redirect("/chat1")
+        if chat == 2:
+            return redirect("/chat2")
+        if chat == 3:
+            return redirect("/chat3")
+        if chat == 4:
+            return redirect("/chat4")          
+        return redirect("/chat5")
+    else:
+        return render_template("index.html")
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
@@ -112,3 +124,22 @@ def register():
         return redirect("/login")
     else:
         return render_template("register.html")
+
+@app.route("/chat1", methods=["GET", "POST"])
+@login_required
+def chat1():
+    if request.method == "POST":
+        #insert text information in sql
+        text = request.form.get("text")
+        now = datetime.now()
+        time = now.strftime("%H:%M:%S") 
+        username = db.execute("SELECT username FROM users WHERE id = ?", session["user_id"])
+        for user in username:
+            username1 = user["username"]
+
+        db.execute("INSERT INTO texts (chat, time, chat_id, user_id, username) VALUES(?,?,?,?,?)", text, time, 1, session["user_id"],username1)
+        
+        return redirect("/chat1")
+    else:
+        chat1 = db.execute("SELECT * FROM texts WHERE chat_id = ?", 1)
+        return render_template("chat1.html", chat1=chat1)
