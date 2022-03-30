@@ -1,5 +1,4 @@
 Flask
 Flask-Session
-
-venv:
-    . venv/bin/activate
+SocketIO
+. venv/bin/activate

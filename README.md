@@ -1,13 +1,13 @@
 # KVcord
 #### Video Demo:  <URL HERE>
-#### Description: KVcord is an online chat app where there is only 1 singlular messaging channel, that people have to create accounts for via a login and register function. The app is mimicking the popular application "discord", but without many of the features. Using Flask, the application will require a login to use it's function, but not utilize an api to recieve information. 
+#### Description: KVcord is an online chat app where there is 5 messaging channels, that people have to create accounts for via a login and register function. The app is mimicking the popular application "discord", but without many of the features. Using Flask, the application will require a login to use it's function. 
 
 <div id="top"></div>
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/Kylejeong2/KVcord">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="/static/favicon.ico" alt="Logo" width="80" height="80">
   </a>
   <p>https://www.linkedin.com/in/kyle-jeong-971445205/</p>
 <h3 align="center">KVcord</h3>
@@ -35,6 +35,8 @@
 ## About The Project
 See top of File ^
 
+<img src="" alt="ss of site">
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
@@ -42,6 +44,7 @@ See top of File ^
 
 * [Flask](https://flask.palletsprojects.com/en/2.0.x/)
 * [Python](https://www.python.org/)
+* [Javascript](https://www.javascript.com/)
 * [HTML](https://html.com/)
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 * [Bootstrap](https://getbootstrap.com)
@@ -52,7 +55,7 @@ See top of File ^
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Login Functionality
+- [x] Login Functionality
 - [ ] Chat Functionality
 - [ ] Full functioning html & css
 

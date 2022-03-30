@@ -15,3 +15,9 @@ body
 {
     background-color: #2C2F33;
 }
+
+.table_outer 
+{ 
+    height: 15em; 
+    overflow: auto; 
+}
