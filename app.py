@@ -130,15 +130,20 @@ def register():
 @app.route("/chat1")
 @login_required
 def chat1():
-    return render_template('chat1.html')
+    usernames = db.execute("SELECT username FROM users WHERE id = ?", session["user_id"])
+    username = ""
+    for user in usernames:
+        username = user["username"]
 
-def messager_received(methods=['GET', 'POST']):
+    return render_template('chat1.html', username=username)
+
+def message_received(methods=['GET', 'POST']):
     print('message was received!!!')
 
 @socketio.on('my event')
 def handle_my_custom_event(json, methods=['GET', 'POST']):
     print('received my event: ' + str(json))
-    socketio.emit('my response', json, callback=message-received)
+    socketio.emit('my response', json, callback=message_received)
 
 if __name__ == '__main__':
     socketio.run(app, debug=True)

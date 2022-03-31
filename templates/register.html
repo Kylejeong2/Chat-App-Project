@@ -5,31 +5,24 @@
 {% endblock %}
 
 {% block main %} 
+
+<h1 class="mt-0" style="color: #5865F2; font-size: 8vw; padding-bottom: 10px; padding-top: 0px;"><u>______Register______</u></h1>
     <form action="/register" method="post">
         <div class="container">
             <div class="row">
-                <div class="col mb-3">
-                    <img src="/images/texting.gif" class="img-fluid" alt="texting gif">
+                <div class="col">
+                    <img src="/static/texting.gif" class="img-fluid" alt="texting gif">
                 </div>
                 <div class="col mb-3">
-                    <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username" type="text">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col mb-3"></div>
-                <div class="col mb-3">
-                    <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col"></div>
-                <div class="col mb-3">
-                    <input class="form-control mx-auto w-auto" id="confirmation" name="confirmation" placeholder="Retype Password" type="password">
+                    <input autocomplete="off" autofocus class="form-control mx-auto w-auto mb-3" id="username" name="username" placeholder="Username" type="text">
+                    <input class="form-control mx-auto w-auto mb-3" id="password" name="password" placeholder="Password" type="password">
+                    <input class="form-control mx-auto w-auto mb-3" id="confirmation" name="confirmation" placeholder="Retype Password" type="password">
+                    <h6 class="mb-3 mt-3" style="color:white; font-size:1vw;">Must Include At Least 1 Special Character<br>& Both Passwords Must Match</h6>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                    <h6 style="color:white;">Password Must Include At Least 1 Special Character & Passwords Must Match</h6>
+                    <a class="navbar-brand" href="/" style="color: #5865F2; font-size: 4vw;">KVcord</a>
                 </div>
                 <div class="col">
                     <button class="btn btn-primary" type="submit">Register</button>
