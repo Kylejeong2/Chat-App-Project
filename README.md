@@ -35,7 +35,7 @@
 ## About The Project
 See top of File ^
 
-<img src="/images/" alt="ss of site">
+<img src="/images/screenshot.png" alt="ss of site">
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
