@@ -1,4 +1,5 @@
 Flask
 Flask-Session
 SocketIO
+JQuery
 . venv/bin/activate

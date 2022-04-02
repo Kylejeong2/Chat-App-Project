@@ -40,21 +40,7 @@ def after_request(response):
 @login_required
 def index():
     if request.method == "POST":
-        chat = int(request.form.get("chat"))
-        if chat > 5 or chat < 1:
-            return apology("not a valid chat number", 400)
-        if chat == 1:
-            return redirect("/chat1")
-        if chat == 2:
-            return redirect("/chat2")
-        if chat == 3:
-            return redirect("/chat3")
-        if chat == 4:
-            return redirect("/chat4")
-        if chat == 5:          
-            return redirect("/chat5")
-        else:
-            return apology("Enter a valid chat number", 400)
+        return redirect("/chat")
     else:
         return render_template("index.html")
 
@@ -127,15 +113,15 @@ def register():
     else:
         return render_template("register.html")
 
-@app.route("/chat1")
+@app.route("/chat")
 @login_required
-def chat1():
+def chat():
     usernames = db.execute("SELECT username FROM users WHERE id = ?", session["user_id"])
     username = ""
     for user in usernames:
         username = user["username"]
 
-    return render_template('chat1.html', username=username)
+    return render_template('chat.html', username=username)
 
 def message_received(methods=['GET', 'POST']):
     print('message was received!!!')

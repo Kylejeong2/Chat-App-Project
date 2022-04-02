@@ -1,6 +1,6 @@
 # KVcord
 #### Video Demo:  <URL HERE>
-#### Description: KVcord is an online chat app where there is 5 messaging channels, that people have to create accounts for via a login and register function. The app is mimicking the popular application "discord", but without many of the features. Using Flask, the application will require a login to use it's function. 
+#### Description: KVcord is an online chat app where there is a messaging channel, that people have to create accounts for via a login and register function. The app is mimicking the popular application "discord", but without many of the features. Using Flask, the application will require a login to use it's function. The application is powered by Flask and SocketIO, a library used with flask to create chat applications. The app.py takes care of all of the login functionality, and the login info is saved in a SQL database. The app.py also has the index which takes you to any of the 5 available chat pages. 
 
 <div id="top"></div>
 <!-- PROJECT LOGO -->
@@ -35,7 +35,7 @@
 ## About The Project
 See top of File ^
 
-<img src="" alt="ss of site">
+<img src="/images/" alt="ss of site">
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -49,6 +49,7 @@ See top of File ^
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 * [Bootstrap](https://getbootstrap.com)
 * [JINJA](https://jinja.palletsprojects.com/en/3.1.x/)
+* [JQuery](https://jquery.com/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -56,8 +57,9 @@ See top of File ^
 ## Roadmap
 
 - [x] Login Functionality
-- [ ] Chat Functionality
-- [ ] Full functioning html & css
+- [x] Chat Functionality
+- [x] Full functioning html & css
+- [x] coloring on chat messages
 
 See the [open issues](https://github.com/Kylejeong2/KVcord/issues) for a full list of proposed features (and known issues).
 
