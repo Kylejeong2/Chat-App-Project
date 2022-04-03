@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath kvcord kvcord.wsgi
+web: gunicorn app.py:main
