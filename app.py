@@ -1,6 +1,6 @@
 import os
 
-from cs50 import SQL
+import sqlite3
 from flask import Flask, flash, redirect, render_template, request, session
 from flask_session import Session
 from tempfile import mkdtemp
@@ -27,7 +27,8 @@ app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
 #configure database
-db = SQL("sqlite:///KVcord.db")
+connection = sqlite3.connect("sqlite:///KVcord.db")
+db = connection.cursor()
 
 @app.after_request
 def after_request(response):
