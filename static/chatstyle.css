@@ -57,7 +57,6 @@ width: 1050px;
 max-width: 100%;
 border: 2px solid #212121;
 border-radius: 4px;
-overflow: scroll; 
 position: relative;
 }
 
@@ -74,7 +73,6 @@ border: 1px solid #505050;
 overflow: auto;
 border-radius: 4px;
 border-bottom: 4px solid #505050;
-overflow: scroll;
 position: relative;
 }
 
@@ -97,7 +95,6 @@ color: #ff0000;
 #menu {
 padding: 15px 25px;
 display: flex;
-overflow: scroll;
 position: relative;
 }
 
