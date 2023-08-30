@@ -1,5 +1,5 @@
 # Kcord
-#### Video Demo:  <https://www.youtube.com/watch?v=PGEIp22lKxo>
+ 
 #### Description: Kcord is an online chat app where there is a messaging channel, that people have to create accounts for via a login and register function. The app is mimicking the popular application "discord", but without many of the features. Using Flask, the application will require a login to use it's function. The application is powered by Flask and SocketIO, a library used with flask to create chat applications. The app.py takes care of all of the login functionality, and the login info is saved in a SQL database. The app.py also has the index which takes you to the chat page. The chat, login, and register pages are all derived from the layout.html file using Jinja as the template. I considered creating multiple chat channels in the server, but 1 centralized channel is sufficient for the purpose of the application. The application was designed for just the chat functionality. I also considered having the messages be anonymous messages and having the platform mimic the likes of the popular anonymous chat website known as Omegle, but I ultimately chose having the users be identified, as I see more functionality with the identified users. 
 
 <div id="top"></div>
