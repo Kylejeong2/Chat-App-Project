@@ -7,7 +7,6 @@
 <br />
 <div align="center">
   <a href="https://github.com/Kylejeong2/Kcord">
-    <img src="/static/favicon.ico" alt="Logo" width="80" height="80">
   </a>
   <p>https://www.linkedin.com/in/kyle-jeong/</p>
 <h3 align="center">Kcord</h3>
