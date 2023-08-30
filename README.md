@@ -34,8 +34,9 @@
 ## About The Project
 See top of File ^
 
+<!-- 
 <img src="/images/screenshot.png" alt="ss of site">
-
+-->
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
