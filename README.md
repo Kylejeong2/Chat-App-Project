@@ -39,6 +39,10 @@ See top of File ^
 -->
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+## Get Started
+
+pip3 install -r requirements.txt
+flask run
 
 ### Built With
 
