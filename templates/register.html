@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %} 
+
+<h1 class="mt-0" style="color: #5865F2; font-size: 8vw; padding-bottom: 10px; padding-top: 0px;"><u>______REGISTER______</u></h1>
+    <form action="/register" method="post">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <img src="/static/texting.gif" class="img-fluid" alt="texting gif">
+                </div>
+                <div class="col mb-3">
+                    <input autocomplete="off" autofocus class="form-control mx-auto w-auto mb-3" id="username" name="username" placeholder="Username" type="text">
+                    <input class="form-control mx-auto w-auto mb-3" id="password" name="password" placeholder="Password" type="password">
+                    <input class="form-control mx-auto w-auto mb-3" id="confirmation" name="confirmation" placeholder="Retype Password" type="password">
+                    <h6 class="mb-3 mt-3" style="color:white; font-size:1vw;">Must Include At Least 1 Special Character<br>& Both Passwords Must Match</h6>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <a class="navbar-brand" href="/" style="color: #5865F2; font-size: 4vw;">Kcord</a>
+                </div>
+                <div class="col">
+                    <button class="btn btn-primary" type="submit">Register</button>
+                </div>
+            </div>
+        </div>
+    </form>
+{% endblock %}

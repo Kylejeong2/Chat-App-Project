@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Chat
+{% endblock %}
+
+{% block head %}
+    <link href="/static/chatstyle.css" rel="stylesheet">
+{% endblock %}
+
+{% block main %}
+    <meta class="username" data-username="{{ username }}">
+    <h3 class="chattitle"><strong>Kcord Chat</strong></h3>
+    <div id="wrapper">
+        <div id="menu">
+            <p class="user" style="border: solid white; color: white; padding: 5px;">{{ username }}</p>
+        </div>
+
+        <div class="message_holder"></div>
+            <form action="" method="POST">
+                <input type="text" class="message" placeholder="Messages" size="115" maxlength="150"/>
+                <input type="submit" style="background-color: #5865F2; padding: 5px; color: white;"/>
+            </form>  
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
+    <script type="text/javascript">
+    var socket = io.connect('http://' + document.domain + ':' + location.port);
+
+    socket.on( 'connect', function() {
+        socket.emit( 'my event', {
+        data: 'User Connected'
+        } )
+        var form = $( 'form' ).on( 'submit', function( e ) {
+        e.preventDefault()
+        let user_dict = $('.username').data()
+        let user_name = user_dict["username"]
+        let user_input = $( 'input.message' ).val()
+        socket.emit( 'my event', {
+            user_name : user_name,
+            message : user_input
+        } )
+        $( 'input.message' ).val( '' ).focus()
+        } )
+    })
+    socket.on( 'my response', function( msg ) {
+        console.log( msg )
+        if( typeof msg.user_name !== 'undefined' ) {
+        $( 'div.message_holder' ).append( '<div><b style="color: white; text-shadow:-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000; border: #5865F2 2px solid; background-color: #5865F2; padding: 5px; margin: 10px;">'+msg.user_name+'</b>'+msg.message+'</div>' )
+        $(".message_holder").animate({ scrollTop: 20000000 }, "slow");
+        }
+    })
+    </script>
+{% endblock %}
