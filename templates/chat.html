@@ -23,33 +23,33 @@
             </form>  
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> <!-- need JQuery for socketIO to work -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
     <script type="text/javascript">
-    var socket = io.connect('http://' + document.domain + ':' + location.port);
+        var socket = io.connect('http://' + document.domain + ':' + location.port); // connecting to socketIO 
 
-    socket.on( 'connect', function() {
-        socket.emit( 'my event', {
-        data: 'User Connected'
-        } )
-        var form = $( 'form' ).on( 'submit', function( e ) {
-        e.preventDefault()
-        let user_dict = $('.username').data()
-        let user_name = user_dict["username"]
-        let user_input = $( 'input.message' ).val()
-        socket.emit( 'my event', {
-            user_name : user_name,
-            message : user_input
-        } )
-        $( 'input.message' ).val( '' ).focus()
-        } )
-    })
-    socket.on( 'my response', function( msg ) {
-        console.log( msg )
-        if( typeof msg.user_name !== 'undefined' ) {
-        $( 'div.message_holder' ).append( '<div><b style="color: white; text-shadow:-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000; border: #5865F2 2px solid; background-color: #5865F2; padding: 5px; margin: 10px;">'+msg.user_name+'</b>'+msg.message+'</div>' )
-        $(".message_holder").animate({ scrollTop: 20000000 }, "slow");
-        }
-    })
+        socket.on( 'connect', function() {
+            socket.emit( 'my event', { 
+            data: 'User Connected'
+            } )
+            var form = $( 'form' ).on( 'submit', function( e ) { //when enter or submit clicked
+            e.preventDefault() //prevent page refresh 
+            let user_dict = $('.username').data()
+            let user_name = user_dict["username"]
+            let user_input = $( 'input.message' ).val() //gets input messages
+            socket.emit( 'my event', { //socketIO holding the message to be sent
+                user_name : user_name, 
+                message : user_input
+            } )
+            $( 'input.message' ).val( '' ).focus()
+            } )
+        })
+        socket.on( 'my response', function( msg ) {
+            console.log( msg )
+            if( typeof msg.user_name !== 'undefined' ) { 
+            $( 'div.message_holder' ).append( '<div><b style="color: white; text-shadow:-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000; border: #5865F2 2px solid; background-color: #5865F2; padding: 5px; margin: 10px;">'+msg.user_name+'</b>'+msg.message+'</div>' )
+            $(".message_holder").animate({ scrollTop: 20000000 }, "slow"); //actually adding the text to the chat interface
+            }
+        })
     </script>
 {% endblock %}
